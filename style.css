@@ -27,16 +27,17 @@ body::before {
     border: 2px solid #58a6ff;
     border-radius: 15px;
     padding: 30px;
-    max-width: 600px;
-    margin: 50px auto;
     background: rgba(13, 17, 23, 0.85);
-    box-shadow: 0 0 20px rgba(88, 166, 255, 0.3);
+    max-width: 600px;
+    margin: auto;
 }
+
 .grid-layout {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 25px;
+    gap: 20px;
+}
 
 .card-link { text-decoration: none; color: inherit; }
 
@@ -50,17 +51,16 @@ body::before {
 
 .card-didactic { border: 2px solid #ffca28; }
 .card-research { border: 2px solid #7ee787; }
+}
 
-/* REPARARE IMAGINI MARI */
 .avatar {
-  .avatar {
-    width: 120px !important;
-    height: 120px !important;
+    width: 150px !important; /* Mărime fixă mică */
+    height: 150px !important;
     border-radius: 50%;
     object-fit: cover;
-    margin: 10px auto;
-    display: block;
     border: 3px solid #58a6ff;
+    display: block;
+    margin: 10px auto;
 }
 
 .card h2 { font-size: 1rem; color: #ffca28; }
@@ -70,33 +70,26 @@ body::before {
 
 .social-links-vertical {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
     gap: 15px;
     margin-top: 20px;
 }
 
 .social-btn {
-    width: 250px; 
+    width: 280px; /* Mai lat pentru a fi vizibil */
     padding: 15px;
-    border-radius: 30px; 
+    border-radius: 35px; /* Formă de bulă */
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.1em; 
     color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+    text-align: center;
     transition: 0.3s;
-    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .tiktok { background-color: #ff0050; }
 .instagram { background-color: #e1306c; }
-.btn-proiecte { 
-    background-color: #58a6ff; 
-    margin-top: 10px;
+.btn-proiecte { background-color: #58a6ff; }
 
 .social-btn:hover {
     transform: scale(1.05);
