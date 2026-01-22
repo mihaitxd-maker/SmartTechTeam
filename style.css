@@ -67,9 +67,9 @@ p { color: #c9d1d9; }
 .avatar {
     width: 80px;
     height: 80px;
-    border-radius: 50%;
-    background-color: #21262d;
-    border: 2px solid #58a6ff;
+    border-radius: 50%; /* Face poza rotundă */
+    border: 2px solid #58a6ff; /* Conturul albastru din poza ta */
+    object-fit: cover; /* Taie automat marginile pozei ca să nu se lungească */
     margin: 0 auto 15px;
     display: block;
 }
