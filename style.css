@@ -14,16 +14,14 @@ body {
 body::before {
     content: "";
     position: fixed;
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%;
-    background-image: url('logo.jpeg'); 
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: url('logo.jpeg'); /* Numele trebuie să fie identic cu fișierul urcat */
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    opacity: 0.15; 
+    opacity: 0.15;
     z-index: -1;
+}
 }
 .container {
     border: 2px solid #58a6ff;
@@ -72,3 +70,29 @@ body::before {
 .card h2 { font-size: 1rem; color: #ffca28; }
 .card-research h2 { color: #7ee787; }
 .card h3 { margin: 5px 0; font-size: 1.1rem; }
+}
+
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-btn {
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    transition: 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.tiktok { background-color: #ff0050; } /* Culoarea TikTok */
+.instagram { background-color: #e1306c; } /* Culoarea Instagram */
+
+.social-btn:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
