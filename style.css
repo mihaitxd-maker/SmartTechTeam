@@ -1,4 +1,5 @@
-/* Design General */
+/* DESIGN COMPLET - Stil identic cu prima pagină */
+
 body { 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
     background-color: #0d1117; 
@@ -8,13 +9,17 @@ body {
     margin: 0;
     position: relative;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+/* Fundalul cu Logo (transparent) */
 body::before {
     content: "";
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
-    background-image: url('logo.jpeg');
+    background-image: url('logo.jpeg'); /* Asigură-te că ai poza logo.jpeg */
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -22,32 +27,36 @@ body::before {
     z-index: -1;
 }
 
+/* Chenarul Principal (Conturul Albastru) */
 .container { 
     border: 2px solid #58a6ff; 
     border-radius: 15px; 
     padding: 30px; 
-    max-width: 900px;
-    background-color: rgba(13, 17, 23, 0.9);
-    margin: 0 auto;
+    width: 100%;
+    max-width: 900px; /* Lățimea maximă a chenarului */
+    background-color: rgba(13, 17, 23, 0.9); /* Fundal întunecat semi-transparent */
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    margin-bottom: 30px;
 }
 
-h1 { color: #58a6ff; }
+h1 { color: #58a6ff; margin-bottom: 20px; }
+p { color: #c9d1d9; }
 
-/* Carduri Proiecte și Membri */
+/* Grid pentru membrii echipei */
 .grid-layout {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
-    margin: 20px 0;
+    margin-top: 30px;
 }
 
+/* Cardurile individuale pentru membri */
 .card {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid #30363d;
     border-radius: 10px;
     padding: 20px;
-    transition: transform 0.2s;
+    transition: transform 0.2s, border-color 0.2s;
 }
 
 .card:hover {
@@ -55,24 +64,30 @@ h1 { color: #58a6ff; }
     border-color: #58a6ff;
 }
 
-/* Poze Membri (Cercuri) */
 .avatar {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background-color: #58a6ff; /* Culoare de fundal dacă nu există poză */
-    margin: 0 auto 15px;
+    background-color: #21262d;
     border: 2px solid #58a6ff;
-    object-fit: cover;
+    margin: 0 auto 15px;
+    display: block;
 }
 
-/* Butoane */
+/* Stil Buton Înapoi */
 .btn {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #238636;
-    color: white;
+    margin-top: 30px;
+    padding: 10px 25px;
+    color: #58a6ff;
     text-decoration: none;
+    border: 1px solid #58a6ff;
     border-radius: 6px;
     font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #58a6ff;
+    color: white;
 }
