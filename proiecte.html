@@ -2,103 +2,33 @@
 <html lang="ro">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proiecte - SmartTechTeam</title>
-    <style>
-        body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            background-color: #0d1117; 
-            color: white; 
-            text-align: center; 
-            padding: 50px 20px;
-            margin: 0;
-            position: relative;
-            min-height: 100vh;
-        }
-
-        /* Fundal Full Screen identic cu prima pagina */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background-image: url('logo.jpeg');
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: cover;
-            opacity: 0.15; /* Puțin mai transparent ca să se vadă bine lista de proiecte */
-            z-index: -1;
-        }
-
-        .container { 
-            border: 2px solid #58a6ff; 
-            border-radius: 15px; 
-            padding: 30px; 
-            max-width: 900px;
-            background-color: rgba(13, 17, 23, 0.9);
-            margin: 0 auto;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-
-        h1 { color: #58a6ff; margin-bottom: 30px; }
-        
-        /* Stil pentru sectiunile de proiecte */
-        .proiect-card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid #30363d;
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 20px;
-            text-align: left;
-            transition: transform 0.2s;
-        }
-
-        .proiect-card:hover {
-            transform: translateY(-5px);
-            border-color: #58a6ff;
-        }
-
-        .proiect-card h2 { color: #58a6ff; margin-top: 0; }
-        .proiect-card p { color: #8b949e; }
-
-        .btn-back {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 10px 20px;
-            color: #58a6ff;
-            text-decoration: none;
-            font-weight: bold;
-            border: 1px solid #58a6ff;
-            border-radius: 6px;
-            transition: all 0.3s;
-        }
-
-        .btn-back:hover {
-            background-color: #58a6ff;
-            color: white;
-        }
-    </style>
-</head>
+    <title>Proiecte și Membri - SmartTechTeam</title>
+    <link rel="stylesheet" href="style.css"> </head>
 <body>
 
     <div class="container">
         <h1>🛠️ Proiectele Noastre</h1>
-        
-        <div class="proiect-card">
-            <h2>🤖 Robotul de test v1.0</h2>
-            <p>Primul nostru prototip construit la afterclub. Învață să evite obstacolele folosind senzori ultrasonici.</p>
+        <div class="grid-layout">
+            <div class="card">
+                <h2>Robot v1</h2>
+                <p>Prototip cu senzori.</p>
+            </div>
         </div>
 
-        <div class="proiect-card">
-            <h2>💻 Platforma SmartTech</h2>
-            <p>Dezvoltăm un spațiu digital unde elevii de la "Alexandru Domsa" pot învăța programare gratuit.</p>
+        <h1 style="margin-top:50px;">👥 Membrii Echipei</h1>
+        <div class="grid-layout">
+            <div class="card">
+                <div class="avatar"></div> <h2>Nume Membru</h2>
+                <p>Rol: Programator</p>
+            </div>
+            <div class="card">
+                <div class="avatar"></div>
+                <h2>Nume Membru</h2>
+                <p>Rol: Designer</p>
+            </div>
         </div>
 
-        <div class="proiect-card">
-            <h2>🎄 Proiect de Crăciun</h2>
-            <p>O instalație de lumini inteligentă controlată prin telefonul mobil.</p>
-        </div>
-
-        <a href="index.html" class="btn-back">← Înapoi la Pagina Principală</a>
+        <a href="index.html" class="btn" style="background:none; border:1px solid #58a6ff;">← Înapoi</a>
     </div>
 
 </body>
