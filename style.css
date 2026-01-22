@@ -1,108 +1,60 @@
-/* DESIGN COMPLET - Stil identic cu prima pagină */
-
-body { 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-    background-color: #0d1117; 
-    color: white; 
-    text-align: center; 
-    padding: 50px 20px;
+/* Stil general identic cu prima pagina */
+body {
+    font-family: sans-serif;
+    background-color: #0d1117;
+    color: white;
+    text-align: center;
     margin: 0;
-    position: relative;
-    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    border: 2px solid #58a6ff;
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+    background: rgba(13, 17, 23, 0.8);
+}
+
+/* Grid-ul care face cardurile egale */
+.grid-layout {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    width: 250px; /* Latime fixa pentru carduri mici */
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 15px;
+    height: 100%; /* Fortam inaltime egala */
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-/* Fundalul cu Logo (transparent) */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background-image: url('logo.jpeg'); /* Asigură-te că ai poza logo.jpeg */
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    opacity: 0.15;
-    z-index: -1;
-}
-
-/* Chenarul Principal (Conturul Albastru) */
-.container { 
-    border: 2px solid #58a6ff; 
-    border-radius: 15px; 
-    padding: 30px; 
-    width: 100%;
-    max-width: 900px; /* Lățimea maximă a chenarului */
-    background-color: rgba(13, 17, 23, 0.9); /* Fundal întunecat semi-transparent */
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    margin-bottom: 30px;
-}
-
-h1 { color: #58a6ff; margin-bottom: 20px; }
-p { color: #c9d1d9; }
-
-.grid-layout {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 280px)); /* Am redus dimensiunea maximă a cardului */
-    gap: 20px;
-    justify-content: center; /* Centrează cardurile pe pagină */
-    margin-top: 20px;
-}
-
-/* Setează cardul să ocupe tot spațiul disponibil */
-.card {
-    padding: 15px; /* Spațiere interioară redusă */
-    min-height: 350px;
-}
-
-.card h2 {
-    font-size: 1.2em; /* Titlu mai mic pentru divizie */
-    margin-bottom: 10px;
-}
-
-.card h3 {
-    font-size: 1.1em; /* Nume mai mic pentru lider */
-    margin-top: 10px;
-}
-
-.card-didactic {
-    border: 2px solid #ffca28 !important; /* Galbenul din imaginea ta */
-}
-.card-didactic h2 {
-    color: #ffca28;
-}
-/* Stil pentru cardul Research */
-.card-research {
-    border: 2px solid #7ee787 !important; /* Verdele din imaginea ta */
-}
-.card-research h2 {
-    color: #7ee787;
-
-.avatar {
-    width: 150px;  /* Dimensiune mult mai mică pentru poză */
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin: 10px auto;
-    display: block;
-    border: 3px solid #58a6ff
-}
-
-/* Stil Buton Înapoi */
-.btn {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 10px 25px;
-    color: #58a6ff;
-    text-decoration: none;
-    border: 1px solid #58a6ff;
-    border-radius: 6px;
-    font-weight: bold;
     transition: 0.3s;
 }
 
-.btn:hover {
-    background-color: #58a6ff;
-    color: white;
+/* CULORI DIFERITE */
+.card-didactic { border: 2px solid #ffca28; }
+.card-research { border: 2px solid #7ee787; }
+
+/* REPARARE POZE MARI */
+.avatar {
+    width: 120px !important; /* Dimensiune mica fixa */
+    height: 120px !important;
+    border-radius: 50%;
+    object-fit: cover; /* Previne deformarea */
+    margin: 10px 0;
+    border: 3px solid #58a6ff;
 }
+
+.card h2 { font-size: 1.1em; }
+.card h3 { font-size: 1em; margin: 5px 0; }
