@@ -42,21 +42,25 @@ body::before {
 h1 { color: #58a6ff; margin-bottom: 20px; }
 p { color: #c9d1d9; }
 
-/* Grid pentru membrii echipei */
 .grid-layout {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     margin-top: 30px;
+    align-items: stretch; /* Forțează cardurile să se întindă egal pe înălțime */
 }
 
-/* Cardurile individuale pentru membri */
+/* Setează cardul să ocupe tot spațiul disponibil */
 .card {
     background: rgba(255, 255, 255, 0.05);
-    border: 1px solid #30363d;
     border-radius: 10px;
-    padding: 20px;
-    transition: transform 0.2s, border-color 0.2s;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrează conținutul vertical */
+    height: 100%; /* Ocupă toată înălțimea coloanei */
+    box-sizing: border-box;
+}
 }
 
 .card:hover {
@@ -65,13 +69,13 @@ p { color: #c9d1d9; }
 }
 
 .avatar {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%; /* Face poza rotundă */
-    border: 2px solid #58a6ff; /* Conturul albastru din poza ta */
-    object-fit: cover; /* Taie automat marginile pozei ca să nu se lungească */
+    width: 120px;  /* Setează o mărime fixă */
+    height: 120px; /* Setează o mărime fixă */
+    border-radius: 50%;
+    object-fit: cover; /* Taie poza să intre perfect în cerc fără să se deformeze */
     margin: 0 auto 15px;
     display: block;
+    border: 3px solid #58a6ff;
 }
 
 /* Stil Buton Înapoi */
