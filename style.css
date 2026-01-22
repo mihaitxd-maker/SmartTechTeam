@@ -24,13 +24,13 @@ body::before {
 }
 
 .container {
-    border: 2px solid #58a6ff; 
+    border: 2px solid #58a6ff;
     border-radius: 15px;
     padding: 30px;
     max-width: 600px;
     margin: 50px auto;
-    background: rgba(13, 17, 23, 0.85); 
-    box-shadow: 0 0 20px rgba(88, 166, 255, 0.3); 
+    background: rgba(13, 17, 23, 0.85);
+    box-shadow: 0 0 20px rgba(88, 166, 255, 0.3);
 }
 .grid-layout {
     display: flex;
@@ -77,23 +77,28 @@ body::before {
 }
 
 .social-btn {
-    width: 200px;
-    padding: 12px;
-    border-radius: 25px;
+    width: 250px; 
+    padding: 15px;
+    border-radius: 30px; 
     text-decoration: none;
     font-weight: bold;
+    font-size: 1.1em; 
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
     transition: 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.tiktok { background-color: #ff0050; } 
-.instagram { background-color: #e1306c; } 
+.tiktok { background-color: #ff0050; }
+.instagram { background-color: #e1306c; }
+.btn-proiecte { 
+    background-color: #58a6ff; 
+    margin-top: 10px;
 
 .social-btn:hover {
     transform: scale(1.05);
-    opacity: 0.9;
+    filter: brightness(1.2);
 }
