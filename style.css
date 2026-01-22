@@ -44,22 +44,26 @@ p { color: #c9d1d9; }
 
 .grid-layout {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 280px)); /* Am redus dimensiunea maximă a cardului */
     gap: 20px;
-    align-items: stretch;
+    justify-content: center; /* Centrează cardurile pe pagină */
+    margin-top: 20px;
 }
 
 /* Setează cardul să ocupe tot spațiul disponibil */
 .card {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 10px;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centrează conținutul vertical */
-    height: 100%; /* Ocupă toată înălțimea coloanei */
-    box-sizing: border-box;
+    padding: 15px; /* Spațiere interioară redusă */
+    min-height: 350px;
 }
+
+.card h2 {
+    font-size: 1.2em; /* Titlu mai mic pentru divizie */
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-size: 1.1em; /* Nume mai mic pentru lider */
+    margin-top: 10px;
 }
 
 .card-didactic {
@@ -76,13 +80,13 @@ p { color: #c9d1d9; }
     color: #7ee787;
 
 .avatar {
-    width: 120px;  /* Setează o mărime fixă */
-    height: 120px; /* Setează o mărime fixă */
+    width: 150px;  /* Dimensiune mult mai mică pentru poză */
+    height: 150px;
     border-radius: 50%;
-    object-fit: cover; /* Taie poza să intre perfect în cerc fără să se deformeze */
-    margin: 0 auto 15px;
+    object-fit: cover;
+    margin: 10px auto;
     display: block;
-    border: 3px solid #58a6ff;
+    border: 3px solid #58a6ff
 }
 
 /* Stil Buton Înapoi */
